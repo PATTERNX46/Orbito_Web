@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'http://localhost:5000/api', // Your Node.js server address
+  // Updated to your live Render backend address!
+  baseURL: 'https://orbito-backend-5mke.onrender.com/api', 
 });
 
 // Automatically attach the JWT token to requests if the user is logged in
