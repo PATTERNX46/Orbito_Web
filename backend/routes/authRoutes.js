@@ -91,7 +91,12 @@ router.post('/register', async (req, res) => {
 
     // Validate Student Email
     if (role === 'Student') {
-      const isEduEmail = email.endsWith('.edu') || email.endsWith('.ac.in');
+      const isEduEmail = 
+        email.endsWith('.edu') || 
+        email.endsWith('.ac.in') || 
+        email.endsWith('@rccinstitute.org') || 
+        email.endsWith('@rccinstitute.org.in');
+        
       if (!isEduEmail) {
         return res.status(400).json({ message: 'Students must use a valid institute email ID.' });
       }
